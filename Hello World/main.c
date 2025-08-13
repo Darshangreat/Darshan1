@@ -1,20 +1,14 @@
 #include <stdio.h>
+#include <math.h>
 
-int factorial(int n) {
-    if (n == 0)
-        return 1;
-    else
-        return n * factorial(n - 1);
-}
 int main() {
-    int num;
+    double X;
 
+    printf("Enter a number: ");
+    scanf("%lf", &X);
 
-
-    printf("ENTER A NUMBER: ");
-    scanf("%d", &num);
-
-    printf("Factorial of %d is %d", num, factorial (num));
+    printf("square root = %.2lf\n", sqrt(X));
+    printf("Absoulte value = %.2lf\n", fabs(X));
 
     return 0;
 }
