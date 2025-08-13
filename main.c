@@ -1,36 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-    int choice;
-    float a, b;
+int area(int side) {
+     return side * side;
+}
 
-    printf("Menu:\n");
-    printf("1, Add\n2. Subtract\n3. Multiply\n4. Divide\n");
-    printf("ENTER YOUR CHOICE (1-4): ");
-    scanf("%d", &choice);
+int main() {
+    int side;
 
-    printf("ENTER TWO NUMBER :");
-    scanf("%f %f", &a, &b);
+    printf("ENTER THE SIDE OF THE SQUARE: ");
+    scanf("%d", &side);
 
-    switch(choice) {
-    case 1:
-        printf("Result = %.2f", a + b);
-        break;
-    case 2:
-        printf("Result = %.2f", a - b);
-        break;
-    case 3:
-        printf("Result = %.2f", a * b);
-        break;
-    case 4:
-        if (b != 0)
-            printf("Error: Division by zero!");
-        break;
-    default:
-        printf("Invalid choice.");
-
-    }
+    printf("Area of square = %d", area(side));
 
     return 0;
 }
